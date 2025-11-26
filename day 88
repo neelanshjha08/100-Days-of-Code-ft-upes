@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+enum UserRole {
+    ADMIN,
+    USER,
+    GUEST,
+    ROLE_COUNT  // Helper to count number of roles
+};
+
+int main() {
+    enum UserRole role;
+
+    // Array of enum names corresponding to enum values
+    const char *roleNames[] = {"ADMIN", "USER", "GUEST"};
+
+    for (role = ADMIN; role < ROLE_COUNT; role++) {
+        printf("%s = %d\n", roleNames[role], role);
+    }
+
+    return 0;
+}
